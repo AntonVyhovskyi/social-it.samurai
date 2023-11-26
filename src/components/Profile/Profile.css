@@ -1,0 +1,9 @@
+.content {
+  background-color: rgb(94, 94, 94);
+  grid-area: c;
+}
+
+.content>div:first-of-type>img {
+  height: 100px;
+  width: 100%;
+}

@@ -1,0 +1,45 @@
+.userPhoto {
+  width: 100px;
+  height: 100px;
+}
+
+.selectedPage {
+  font-weight: 900;
+}
+
+.pages {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.pages>span {
+  display: block;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.pages>span:hover {
+  background-color: black;
+  color: white;
+}
+
+.follow {
+  padding: 5px;
+  button {
+    background-color: white;
+    padding: 2px;
+    border: 1px solid black;
+    cursor: pointer;
+    &:hover {
+      background-color: aquamarine;
+    }
+    &:disabled {
+      background-color: gray;
+      color: white;
+
+    }
+  }
+}

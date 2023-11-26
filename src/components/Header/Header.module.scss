@@ -1,0 +1,25 @@
+.header{
+  grid-area: h;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  img {
+    max-height: 100%;
+  }
+  div {
+    color: azure;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 10px;
+    margin-right: 10px;
+    transition: 0.3s;
+    
+    button {
+      color: rgb(255, 255, 255);
+    }
+    &:hover {
+      background-color: green;
+    }
+  }
+}
+

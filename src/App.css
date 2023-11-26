@@ -1,0 +1,63 @@
+.app-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  overflow: hidden;
+  grid-template-areas: 
+  "h h"
+  "n c";
+  grid-template-rows: 60px 1fr;
+  grid-template-columns: 2fr 10fr;
+  
+}
+
+.app-wrapper__content {
+  background-color: rgb(47, 0, 255);
+  grid-area: c;
+}
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+html,
+body {
+	height: 100%;
+	line-height: 1;
+}
+textarea,
+button,
+input {
+	font-weight: inherit;
+	font-size: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+button {
+	cursor: pointer;
+	background-color: inherit;
+}
+

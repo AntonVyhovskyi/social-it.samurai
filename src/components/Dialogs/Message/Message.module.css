@@ -1,0 +1,13 @@
+.masage {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(205, 205, 205);
+
+
+}
+.masageName {
+  font-size: 10px;
+  color: rgb(4, 4, 109);
+
+}

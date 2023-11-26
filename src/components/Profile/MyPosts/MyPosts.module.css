@@ -1,0 +1,19 @@
+
+
+.container {
+  padding: 10px;
+}
+
+.btn {
+  color: white;
+  padding: 5px;
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.container textarea {
+  background-color: antiquewhite;
+  border-radius: 10px;
+  padding: 10px;
+}

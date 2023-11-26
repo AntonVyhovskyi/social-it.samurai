@@ -1,0 +1,77 @@
+.container {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.names {
+  border-right: solid 1px black;
+  background-color: rgba(110, 107, 107, 0.999);
+
+}
+
+.name {
+  width: 100%;
+}
+
+.nameLink {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  margin-right: -20px;
+  transition: background-color 0.15s;
+  
+}
+
+.nameLink:hover {
+  background-color: rgb(52, 52, 52);
+}
+
+.dialog {
+  background-color: rgb(141, 141, 141);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+
+}
+.masage {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: rgb(205, 205, 205);
+
+
+}
+.masageName {
+  font-size: 10px;
+  color: rgb(4, 4, 109);
+
+}
+
+.dialogSendTextarea {
+  width: 100%;
+}
+
+.dialogSendTextarea textarea{
+  background-color: rgb(30, 20, 7);
+  height: 100px;
+  resize: none;
+  width: 100%;
+  color: aliceblue;
+  
+} 
+
+.dialogSend button {
+  color: wheat;
+  background-color: rgb(93, 93, 93);
+  border: 2px solid rgb(31, 0, 84);
+}
+
+.dialogSend {
+  gap: 10px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 50px;
+}

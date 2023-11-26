@@ -1,0 +1,49 @@
+.profileContainer{
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.profileContainerImg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.profileItems {
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 20px;
+}
+
+.profileAva{
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 10px;
+  
+
+}
+.profileAva>img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.profileDescr{
+  background-color: white;
+  align-self: start;
+  border-radius: 5px;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+.profileDescrContainer {
+  display: flex;
+  flex-direction: column;
+}

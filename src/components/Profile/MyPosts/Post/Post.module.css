@@ -1,0 +1,34 @@
+.item img {
+  width: 50px;
+  align-self: center;
+  border-radius: 50%;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  align-items: center;
+  padding: 10px;
+  background-color: gray;
+  border-radius: 10px;
+  border: 2px solid white;
+  margin-top: 15px;
+  
+}
+
+.item p {
+  color: white;
+} 
+
+.item span {
+  color: rgb(181, 22, 22);
+  font-weight: 900;
+  
+}
+
+.item div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
