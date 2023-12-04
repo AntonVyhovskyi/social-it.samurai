@@ -32,8 +32,19 @@ export const profileAPI = {
 
     getStatus(userId) {
         return instance.get(`profile/status/${userId}`)
+    },
+    savePhoto(file) {
+        var formData = new FormData();
+        formData.append("image", file)
+        return instance.put(`profile/photo`, formData, {
+            headers: {
+              'Content-Type': 'multipart/form-data'
+            }
+        })
     }
 }
+
+
 
 
 

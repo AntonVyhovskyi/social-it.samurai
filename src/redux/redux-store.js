@@ -15,10 +15,10 @@ let redusers = combineReducers({
     auth: authReducer,
     app: appReducer
 });
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-// const store = createStore(redusers, composeEnhancers(applyMiddleware(thunkMiddleware)))
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(redusers, composeEnhancers(applyMiddleware(thunkMiddleware)))
 
-let store = createStore(redusers, applyMiddleware(thunkMiddleware));
+// let store = createStore(redusers, applyMiddleware(thunkMiddleware));
 
 window.store = store;
 

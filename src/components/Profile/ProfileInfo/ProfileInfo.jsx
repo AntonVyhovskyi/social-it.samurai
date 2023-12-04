@@ -3,12 +3,18 @@ import Preloader from '../../commons/preloader/Preloader';
 import cls from './ProfileInfo.module.scss'
 import ProfileStatus from './ProfileStatus/ProfileStatus';
 const ProfileInfo = (props) => {
+  
 
   if (!props.profile) {
     return <Preloader />
   }
   else {
-   
+    const onMainPhotoSelecter = (e) => {
+      debugger
+      if (e.target.files.length)  {
+        props.savePhoto(e.target.files[0])
+      }
+    }
     return (
 
       <div>
@@ -17,9 +23,10 @@ const ProfileInfo = (props) => {
 
           <div className={cls.profileItems}>
             <div className={cls.profileAva}>
-              <img src={props.profile.photos.large || "https://krasivosti.pro/uploads/posts/2021-04/1618011874_29-p-zlaya-sobaka-sobaki-krasivo-foto-35.jpg"} alt="ava" />
-
+              <img src={props.profile.photos.large || "https://www.linhart-inserv.de/wp-content/uploads/2015/10/nopic.png"} alt="ava" />
+              
             </div>
+            {props.isOwner && <input type='file' onChange={onMainPhotoSelecter} />}
             <div className={cls.profileDescrContainer}>
                 <div className={cls.profileDescr}>
                   {props.profile.lookingForAJob ? 'I  loocking for a job' : 'no loocking fo a job'}
