@@ -3,18 +3,19 @@ import Preloader from '../../commons/preloader/Preloader';
 import cls from './ProfileInfo.module.scss'
 import ProfileStatus from './ProfileStatus/ProfileStatus';
 const ProfileInfo = (props) => {
-  
+  debugger
 
   if (!props.profile) {
     return <Preloader />
   }
   else {
     const onMainPhotoSelecter = (e) => {
-      debugger
-      if (e.target.files.length)  {
+      
+      if (e.target.files.length) {
         props.savePhoto(e.target.files[0])
       }
     }
+    
     return (
 
       <div>
@@ -24,16 +25,31 @@ const ProfileInfo = (props) => {
           <div className={cls.profileItems}>
             <div className={cls.profileAva}>
               <img src={props.profile.photos.large || "https://www.linhart-inserv.de/wp-content/uploads/2015/10/nopic.png"} alt="ava" />
-              
+              {props.isOwner &&
+                <div className={cls.updateFotoButtonContainer}>
+                  <input id='fotoUpdateInput' className={cls.updateFotoButton} type='file' onChange={onMainPhotoSelecter}
+                  />
+                  <label htmlFor='fotoUpdateInput'></label>
+                </div>}
             </div>
-            {props.isOwner && <input type='file' onChange={onMainPhotoSelecter} />}
+
+
             <div className={cls.profileDescrContainer}>
-                <div className={cls.profileDescr}>
-                  {props.profile.lookingForAJob ? 'I  loocking for a job' : 'no loocking fo a job'}
-                </div>
-                
-                <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus} statusUpdateStatus={props.statusUpdateStatus}/>
-                
+              <div className={cls.profileDescrFullName}>
+                <h2>{props.profile.fullName}</h2>
+              </div>
+              <div className={cls.profileDescrStatus}>
+                <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus} statusUpdateStatus={props.statusUpdateStatus} />
+              </div>
+              <div className={cls.profileDescrLookingJob}>
+                {props.profile.lookingForAJob ? 'I  loocking for a job' : 'no loocking for a job'}
+                {props.profile.lookingForAJobDescription ? `My Profile: ${props.prodile.lookingForAJobDescription}` : ''}
+              </div>
+              <div className={cls.profileDescrContacts}>
+                {Object.keys(props.profile.contacts).map(key => {return <Contact key={key} title={key} value={props.profile.contacts[key]} />})}
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -42,5 +58,13 @@ const ProfileInfo = (props) => {
     )
   }
 };
+
+const Contact = ({title, value}) => {
+  return (
+    <div>
+       <b>{title}</b>:{value || 'нема'}
+    </div>
+  )
+}
 
 export default ProfileInfo;

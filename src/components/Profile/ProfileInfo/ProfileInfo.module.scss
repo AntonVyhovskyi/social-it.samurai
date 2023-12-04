@@ -1,10 +1,10 @@
-.profileContainer{
+.profileContainer {
   position: relative;
   width: 100%;
   height: 200px;
 }
 
-.profileContainerImg{
+.profileContainerImg {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -21,21 +21,24 @@
   gap: 20px;
 }
 
-.profileAva{
+.profileAva {
   width: 180px;
   height: 180px;
   overflow: hidden;
   border-radius: 10px;
-  
+  position: relative;
+  border: 2px solid rgb(0, 153, 255);
+  box-shadow: -5px -2px 15px rgb(0, 0, 0);
 
 }
+
 .profileAva>img {
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-.profileDescr{
+.profileDescr {
   background-color: white;
   align-self: start;
   border-radius: 5px;
@@ -46,4 +49,30 @@
 .profileDescrContainer {
   display: flex;
   flex-direction: column;
+}
+
+.updateFotoButtonContainer {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  overflow: hidden;
+  input {
+    opacity: 0;
+  }
+  label {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url(../../../assets/Images/updateFoto.png);
+    transition: all 0.8s;
+    &:hover {
+      transform: scale(1.1) rotate(360deg);
+      
+    }
+  }
 }
