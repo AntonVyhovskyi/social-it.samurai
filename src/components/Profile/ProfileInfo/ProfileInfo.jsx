@@ -10,12 +10,12 @@ const ProfileInfo = (props) => {
   }
   else {
     const onMainPhotoSelecter = (e) => {
-      
+
       if (e.target.files.length) {
         props.savePhoto(e.target.files[0])
       }
     }
-    
+
     return (
 
       <div>
@@ -35,18 +35,20 @@ const ProfileInfo = (props) => {
 
 
             <div className={cls.profileDescrContainer}>
-              <div className={cls.profileDescrFullName}>
-                <h2>{props.profile.fullName}</h2>
-              </div>
-              <div className={cls.profileDescrStatus}>
-                <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus} statusUpdateStatus={props.statusUpdateStatus} />
-              </div>
-              <div className={cls.profileDescrLookingJob}>
-                {props.profile.lookingForAJob ? 'I  loocking for a job' : 'no loocking for a job'}
-                {props.profile.lookingForAJobDescription ? `My Profile: ${props.prodile.lookingForAJobDescription}` : ''}
+              <div className={cls.profileDescrLeft}>
+                <div className={cls.profileDescrFullName}>
+                  <h2>{props.profile.fullName}</h2>
+                </div>
+                <div className={cls.profileDescrStatus}>
+                  <ProfileStatus status={props.status} updateUserStatus={props.updateUserStatus} statusUpdateStatus={props.statusUpdateStatus} />
+                </div>
+                <div className={cls.profileDescrLookingJob}>
+                  {props.profile.lookingForAJob ? 'I  loocking for a job' : 'no loocking for a job'}
+                  {props.profile.lookingForAJobDescription ? `My Profile: ${props.prodile.lookingForAJobDescription}` : ''}
+                </div>
               </div>
               <div className={cls.profileDescrContacts}>
-                {Object.keys(props.profile.contacts).map(key => {return <Contact key={key} title={key} value={props.profile.contacts[key]} />})}
+                {Object.keys(props.profile.contacts).map(key => { return <Contact key={key} title={key} value={props.profile.contacts[key]} /> })}
               </div>
 
 
@@ -59,10 +61,10 @@ const ProfileInfo = (props) => {
   }
 };
 
-const Contact = ({title, value}) => {
+const Contact = ({ title, value }) => {
   return (
     <div>
-       <b>{title}</b>:{value || 'нема'}
+      <b>{title}</b>:{value || 'нема'}
     </div>
   )
 }

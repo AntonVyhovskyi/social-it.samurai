@@ -1,3 +1,5 @@
+
+
 .profileContainer {
   position: relative;
   width: 100%;
@@ -47,9 +49,12 @@
 }
 
 .profileDescrContainer {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  width: 100%;
+  gap: 15px;
 }
+
 
 .updateFotoButtonContainer {
   width: 32px;
@@ -75,4 +80,18 @@
       
     }
   }
+}
+
+.profileDescrFullName {
+  h2 {
+    color: blue;
+    font-weight: 900;
+  }
+}
+
+
+.profileDescrLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
